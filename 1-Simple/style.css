@@ -1,0 +1,63 @@
+
+
+header
+{
+    min-height: 100px;
+    background-color: #5896c9;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h1
+{
+    color: #ffffff;
+    text-align: center;
+}
+
+.description
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #323232;
+    background-color: #ffbb00;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+footer
+{
+    min-height: 200px;
+    background-color: #787878;
+    padding-top: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.with-label
+{
+    position: relative;
+    padding-top: 30px;
+}
+
+.comments
+{
+    background-color: #3598bb;
+    color: #ffffff;
+}
+
+aside
+{
+    background-color: #ffeec3;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+[data-pgc-master] .page-comments
+{
+    display: none;
+}
+
