@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-pgc-master="index.html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Blank Template for Bootstrap</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <link href="../1-Simple/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <aside class="page-comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <p><b>About this page:</b>&nbsp;Here we add a complex header and explore 3 ways of handling its customisation on child pages.</p>
+                        <p><b>Try:</b></p>
+                        <ol> 
+                            <li>
+                                <b>Open services.html </b>and take a look at different degrees of how headers can be edited on child pages.
+                            </li>
+                            <li>
+                                <b>Choosing the right approach</b> depends on how flexible you need your header to be.
+                            </li>
+                            <li>
+                                <b>Header 2 has optional areas.</b> Optional areas are ok as long as you don't have too many of them.
+                            </li>                             
+                            <li>
+                                <b>Header 3 is the most flexible. </b>The whole thing is editable and we use components to make building headers on child pages easier.
+                            </li>
+                            <li>
+                                <b>We could put any HTML into Header 3</b> because the whole area is editable. But that would be hard to maintain on multiple pages. So, instead we use components. If we needed to change the title we would just change the Header title component and update.&nbsp;
+                            </li>                             
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation"> 
+            <div class="container-fluid"> 
+                <div class="navbar-header"> 
+                    <a class="navbar-brand" href="index.html">My Company</a> 
+                </div>                 
+                <ul class="nav navbar-nav"> 
+                    <li data-pgc-field="menu-services" class="active">
+                        <a href="services.html">Services</a>
+                    </li>                     
+                </ul>
+            </div>             
+        </nav>
+        <header>
+            <div class="description">
+                <b>
+    Header 1</b> - Header itself is not editable. We have editable areas for banner, title and tagline. The button is not editable. 
+                <b>Exercise:</b> make the button editable. &nbsp;&nbsp;
+            </div>
+            <a href="http://pinegrow.com" data-pgc-field="header1-banner-link">
+                <img src="images/another-banner.jpg" class="banner" data-pgc-field="header1-banner-image">
+            </a>
+            <h1 data-pgc-field="header1-title">Our Services are OK</h1>
+            <p class="lead text-center tagline" data-pgc-field="header1-tagline">We can do lots of different things</p>
+            <p class="lead text-center tagline"><a class="btn btn-lg btn-warning" href="#">Get in touch with us!</a></p>
+        </header>
+        <header class="header-shade-1">
+            <div class="description">
+                <b>
+    Header 2</b> - Header itself is not editable. We have editable areas for banner, title and tagline. 
+                <b>The button and the banner are optiona</b>l and can be deleted on child pages. Use 
+                <b>Page -&gt; Restore optional areas</b>&nbsp;on child pages to get deleted optional areas back.
+            </div>
+            <a href="http://pinegrow.com" data-pgc-field="header2-banner-link">
+                <img src="images/another-banner.jpg" class="banner" data-pgc-field="header2-banner-image">
+            </a>
+            <h1 data-pgc-field="header2-title">Our Services are not that bad</h1>
+            <p class="lead text-center tagline" data-pgc-field="header2-tagline">At least we're honest</p>
+        </header>
+        <header class="header-shade-2" data-pgc-field="header3">
+            <div class="description">
+                <b>
+    Header 3 - Editable header + Components</b>. The inner content of the header is editable. Inside we have header elements defined as editable components, so that it is easy to construct custom headers on child pages.
+            </div>
+            <a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+                <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+            </a>
+            <p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">We can delete and rearange elements as we please!</p>
+            <p class="lead text-center tagline" data-pgc-optional-ignore data-pgc="header-button"><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a></p>
+            <h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1>
+            <div class="container">
+                <div class="alert alert-info"> 
+                    <strong>The whole header is editable,</strong> so we can put anything we want into it.        
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 with-label col-sm-8" data-pgc-field="content">
+                        <div class="description">
+                            Editable area - Content
+</div>
+                        <h2>Our services</h2>
+                        <p>We do lots of cool stuff:</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Service A</h3> 
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Service B</h3> 
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Service C</h3> 
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 with-label col-sm-4" data-pgc-field="sidebar">
+                        <div class="description">
+                            Editable area - Sidebar&nbsp;
+</div>
+                        <h3>Services sidebar</h3>
+                        <div class="alert alert-info"> 
+                            <strong>Well done!</strong> You successfully read this important alert message.        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
+<!--[Pinegrow components saved data - this data is no longer used in the component. We're saving it just in case. Clear this with Components -> Clear saved unused edits]<li data-pgc-field="menu-portfolio">
+    <a href="portfolio.html">Portfolio</a>
+</li><li data-pgc-field="menu-contact">
+    <a href="contact.html">Contact</a>
+</li><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">We can delete and rearange elements as we please!</p><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a><h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">We can delete and rearange elements as we please!</p><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a><h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">We can delete and rearange elements as we please!</p><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a><h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">Working with us will make you happy</p><h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Halo!</a><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">Working with us will make you happy</p><h1 data-pgc="header-title" data-pgc-field="title">We'll do 80% of what we promise!</h1><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/another-banner.jpg" class="banner" data-pgc-field="banner-image"><h1 data-pgc="header-title" data-pgc-field="title">My Company Makes Great Things!</h1><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">Working with us will make you happy</p><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Get in touch with us!</a><a href="http://pinegrow.com" data-pgc="header-banner" data-pgc-field="banner-link">
+    <img src="images/banner.jpg" class="banner" data-pgc-field="banner-image">
+</a><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><img src="images/banner.jpg" class="banner" data-pgc-field="banner-image"><h1 data-pgc="header-title" data-pgc-field="title">My Company Makes Great Things!</h1><p class="lead text-center tagline" data-pgc="header-tagline" data-pgc-field="tagline">Working with us will make you happy</p><a class="btn btn-lg btn-warning" href="#" data-pgc-field="button">Get in touch with us!</a><p class="lead text-center tagline" data-pgc-field="header1-button"><a class="btn btn-lg btn-warning" href="#">Get in touch with us!</a></p>-->

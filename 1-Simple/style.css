@@ -23,9 +23,11 @@ h1
     left: 10px;
     color: #323232;
     background-color: #ffbb00;
-    padding-left: 10px;
-    padding-right: 10px;
     font-size: 18px;
+    max-width: 75%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    padding: 4px 10px;
 }
 
 footer
@@ -64,5 +66,28 @@ aside
 .navbar
 {
     margin-bottom: 0;
+}
+
+.banner
+{
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tagline
+{
+    color: #ffffff;
+}
+
+.header-shade-1
+{
+    background-color: #109b3b;
+}
+
+.header-shade-2
+{
+    background-color: #9c3db1;
 }
 
