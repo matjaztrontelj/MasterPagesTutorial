@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-pgc-master="index.html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Blank Template for Bootstrap</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <link href="../1-Simple/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <aside class="page-comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <p><b>About this page:</b> Here we explore what happens when <b>master page and child page have different editable areas</b>. Master page (index.html) has editable area with the id "content" and the child page (child.html) has an editable area with the id "main-content". Updating the child page will result in losing the current content of its editable area. Why?</p>
+                        <p>Updating child pages goes like this:</p>
+                        <ol>
+                            <li>Pinegrow remembers the content of all existing editable areas on the child page
+                                <br>
+                            </li>
+                            <li>Master page is cloned to the child page (they are the same)
+                                <br>
+                            </li>
+                            <li>Pinegrow goes through editable areas and restores its content with information from the step 1. Since editable area "another-content" doesn't exist in the master page (and on cloned child page), its content can't be restored and is therefore lost.
+                                <br>
+                            </li>
+                        </ol>
+                        <p><b>How can this mismatch happen?</b></p>
+                        <p>The most common situation is changing which master page is used on the child page. This will happen if the old master page uses editable area "content" and the new master page uses another id, for example "main-content".</p>
+                        <p>Components -&gt; Quick update will now warn you if this happens and offer options to skip the update.</p>
+                        <p><b>What is the solution?</b></p>
+                        <p>If you want to keep child page edits, select the editable area on the child page and rename the field id on "Use editable area" ACT action so that it matches the editable area id used on the master page.</p>
+                        <p><b>Try:</b></p>
+                        <ol> 
+                            <li>
+                                <b>Take a look</b> at editable area on the master and child page. Notice that ids are different.
+                            </li>
+                            <li>Do 
+                                <b>Components -&gt; Quick update with child.html open.&nbsp;</b>A warning will pop up, with question how to proceed. Try different answers and then use Undo to get back to the original state and try again.
+                            </li>                                                          
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="container">
+            <div class="row">
+                <div class="with-label col-md-6" data-pgc-field="main-content">
+                    <div class="description">
+                        Editable area - MainContent
+</div>
+                    <h3>The id of this area is different - its content will be lost on update<!--[Pinegrow components saved data - this data is no longer used in the component. We're saving it just in case. Clear this with Components -> Clear saved unused edits]<h3 data-pgc="test" data-pgc-field="text-niga">MKoli</h3>--></h3> 
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <img src="images/sunrise-phu-quoc-island-ocean.jpg" class="img-responsive" />
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
