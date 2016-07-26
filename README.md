@@ -4,6 +4,8 @@ Download or clone (recommended, you'll be able to easily update all the changes)
 
 Then, open 1-Simple and others with Open project in Pinegrow.
 
+**IMPORTANT**: DO NOT open the whole MasterPagesTutorial as a Pinegrow project. Each tutorial part is an independent Pinegrow project. Open each individualstep as a project in Pinegrow.
+
 1-Simple - Simple master page with two editable areas
 --------
 Open master.html and read the "About this page" section on the top of the master.
